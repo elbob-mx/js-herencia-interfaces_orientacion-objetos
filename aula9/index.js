@@ -2,35 +2,35 @@
 // movimientos de cuenta Laura ----------->
 
 import { cliente } from "./Cliente.js";
+import { cuenta } from "./Cuenta.js";
 // import { cuentaCorriente } from "./CuentaCorriente.js";
 // import { cuentaAhorro } from "./CuentaAhorro.js";
-import { cuenta } from "./Cuenta.js";
 
 // variables *** //
 
 const usuario = new cliente("Laura", "850690845005", "2115");
 const usuario2 = new cliente("Dana", "099433671834", "5593");
 
-const cuentaDeLaura = new cuentaCorriente(usuario, "58280270", "022");
-const cuentaDeDana = new cuentaCorriente(usuario2, "84250304", "028");
+const cuentaDeLaura = new cuenta(usuario, "58280270", "022", 0);
+const cuentaDeDana = new cuenta(usuario2, "84250304", "028", 0);
 
-const cuentaAhorroLaura = new cuentaAhorro(usuario, "764946", "022", 0);
+const cuentaAhorroLaura = new cuenta(usuario, "764946", "022", 0);
 
 // cliente usuario Laura ----------------------->
 let saldo = cuentaDeLaura.verSaldo();
-console.log("El saldo actual es: " + "$ " + saldo + " MXN");
+console.log("El saldo actual es: $ " + saldo + " MXN");
 
 saldo = cuentaDeLaura.deposito(1000);
-console.log("El saldo actual es: " + "$ " + saldo + " MXN");
-saldo = cuentaDeLaura.verSaldo();
-console.log(
-  "El saldo actual de " +
-    usuario.nombreCliente +
-    " es de: " +
-    "$" +
-    cuentaDeLaura.verSaldo() +
-    "MXN"
-);
+console.log("El saldo actual es: $ " + saldo + " MXN");
+// saldo = cuentaDeLaura.verSaldo();
+// console.log(
+//   "El saldo actual de " +
+//     usuario.nombreCliente +
+//     " es de: " +
+//     "$" +
+//     cuentaDeLaura.verSaldo() +
+//     "MXN"
+// );
 
 // nuevo cliente 2 ------------------------->
 // if(cuentaDeDana.cliente) {
@@ -55,11 +55,12 @@ saldo = cuentaDeDana.deposito(103475.756);
 // cuentaDeLaura.transferirParaCuenta(paramValor, cuentaDeDana);
 // console.log("Parámetro 'Valor'", paramValor);
 
-// console.log("el saldo actual de " + usuario2.nombreCliente + " es de: " + "$" + cuentaDeDana.verSaldo() + "MXN");
-// console.log("El saldo actual de " + usuario.nombreCliente + " es de: " + "$" + cuentaDeLaura.verSaldo() + "MXN");
+console.log("el saldo actual de " + usuario2.nombreCliente + " es de: " + "$" + cuentaDeDana.verSaldo() + "MXN");
+console.log("El saldo actual de " + usuario.nombreCliente + " es de: " + "$" + cuentaDeLaura.verSaldo() + "MXN");
 
 // console.log(cuentaDeLaura.usuario);
 // console.log(cuentaDeDana.usuario);
 // console.log("CANTIDAD DE CUENTAS CORRIENTES TOTALES: " + cuentaCorriente.cantidadCuentas);
 console.log(cuentaDeLaura);
 console.log(cuentaAhorroLaura);
+console.log(cuentaDeDana);

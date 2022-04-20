@@ -19,12 +19,12 @@ export class cuenta {
       this.#saldo += importe;
       parseFloat(this.#saldo).toFixed(2);
       console.log("**Depósito realizado con éxito**" + "por $" + importe);
-      console.log("**Nuevo saldo: $" + this.#saldo);
-      return this.#saldo.toFixed(2);
+      console.log("**Nuevo saldo: $ " + this.#saldo + " MXN");
+      return parseFloat(this.#saldo).toFixed(2);
     } else {
       console.log(`Operación no válida.`);
       parseFloat(this.#saldo).toFixed(2);
-      return this.#saldo.toFixed(2);
+      return parseFloat(this.#saldo).toFixed(2);
     }
   }
 
@@ -34,16 +34,16 @@ export class cuenta {
       parseFloat(this.#saldo).toFixed(2);
       console.log("**Retiro realizado con éxito**" + "por $" + importe);
       console.log("**Nuevo saldo: $" + this.#saldo);
-      return this.#saldo.toFixed(2);
+      return parseFloat(this.#saldo).toFixed(2);
     } else {
       console.log(`Operación no válida.`);
       parseFloat(this.#saldo).toFixed(2);
-      return this.#saldo.toFixed(2);
+      return parseFloat(this.#saldo).toFixed(2);
     }
   }
 
   verSaldo() {
-    return this.#saldo.toFixed(2);
+    return parseFloat(this.#saldo).toFixed(2);
   }
 
   transferirParaCuenta(importe, cuentaDestino) {
