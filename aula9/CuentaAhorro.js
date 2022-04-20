@@ -1,29 +1,17 @@
-// clase cuenta corriente ------------------>
+// clase cuenta de ahorros ------------------>
 
-export class cuentaCorriente {
+export class cuentaAhorro {
+  // atributos secretos:
   #usuario;
-  numero;
-  agencia;
   #saldo;
-  static cantidadCuentas = 0;
 
-  /**
-   * @param {import("./Cliente").cliente} valor
-   */
-  set usuario(valor) {
-    if (valor instanceof cliente) this.#usuario = valor;
-  }
-
-  get usuario() {
-    return this.#usuario;
-  }
-
-  constructor(usuario, numero, agencia) {
-    this.#usuario = usuario;
+  // cuenta que transfiere, deposita, retira ***
+  constructor(usuario, numero, agencia, saldo) {
+    // atributos públicos:
     this.numero = numero;
     this.agencia = agencia;
-    this.#saldo = 0;
-    cuentaCorriente.cantidadCuentas++;
+    this.#usuario = usuario;
+    this.#saldo = saldo;
   }
 
   deposito(importe) {
