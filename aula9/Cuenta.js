@@ -43,7 +43,7 @@ export class cuenta {
   }
 
   verSaldo() {
-    return (this.#usuario.nombreCliente + ", el saldo en tu cuenta de ahorros es de: $ " + parseFloat(this.#saldo).toFixed(2) + " MXN");
+    return (this.#usuario.nombreCliente + ", el saldo en tu cuenta es de: $ " + parseFloat(this.#saldo).toFixed(2) + " MXN");
   }
 
   transferirParaCuenta(importe, cuentaDestino) {
