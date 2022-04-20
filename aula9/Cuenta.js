@@ -29,11 +29,12 @@ export class cuenta {
   }
 
   retiro(importe) {
+    importe = importe * 1.05;
     if (importe <= this.#saldo) {
       this.#saldo -= importe;
       parseFloat(this.#saldo).toFixed(2);
       console.log("**Retiro realizado con éxito**" + "por $" + importe);
-      console.log("**Nuevo saldo: $" + this.#saldo);
+      console.log("**Nuevo saldo: $" + parseFloat(this.#saldo).toFixed(2));
       return parseFloat(this.#saldo).toFixed(2);
     } else {
       console.log(`Operación no válida.`);
