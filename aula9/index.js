@@ -13,6 +13,8 @@ const usuario2 = new cliente("Dana", "099433671834", "5593");
 const cuentaDeLaura = new cuentaCorriente(usuario, "58280270", "022");
 const cuentaDeDana = new cuentaCorriente(usuario2, "84250304", "028");
 
+const cuentaAhorroLaura = new cuentaAhorro(usuario, "764946", "022", 0);
+
 // cliente usuario Laura ----------------------->
 let saldo = cuentaDeLaura.verSaldo();
 console.log("El saldo actual es: " + "$ " + saldo + " MXN");
@@ -55,6 +57,8 @@ saldo = cuentaDeDana.deposito(103475.756);
 // console.log("el saldo actual de " + usuario2.nombreCliente + " es de: " + "$" + cuentaDeDana.verSaldo() + "MXN");
 // console.log("El saldo actual de " + usuario.nombreCliente + " es de: " + "$" + cuentaDeLaura.verSaldo() + "MXN");
 
-console.log(cuentaDeLaura.usuario);
-console.log(cuentaDeDana.usuario);
+// console.log(cuentaDeLaura.usuario);
+// console.log(cuentaDeDana.usuario);
 // console.log("CANTIDAD DE CUENTAS CORRIENTES TOTALES: " + cuentaCorriente.cantidadCuentas);
+console.log(cuentaDeLaura);
+console.log(cuentaAhorroLaura);
