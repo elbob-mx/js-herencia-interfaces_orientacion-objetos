@@ -18,7 +18,7 @@ const cuentaAhorroLaura = new cuenta(usuario, "764946", "022", 10000.829);
 
 // cliente usuario Laura ----------------------->
 let saldo = cuentaDeLaura.verSaldo();
-console.log("El saldo actual es: $ " + saldo + " MXN");
+console.log(cuentaDeLaura.verSaldo());
 
 saldo = cuentaDeLaura.deposito(1000);
 console.log("El saldo actual es: $ " + saldo + " MXN");
