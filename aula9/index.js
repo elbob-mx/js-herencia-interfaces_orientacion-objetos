@@ -11,10 +11,11 @@ import { cuenta } from "./Cuenta.js";
 const usuario = new cliente("Laura", "850690845005", "2115");
 const usuario2 = new cliente("Dana", "099433671834", "5593");
 
-const cuentaDeLaura = new cuenta(usuario, "58280270", "022", 500);
-const cuentaDeDana = new cuenta(usuario2, "84250304", "028", 0);
+const cuentaDeLaura = new cuenta("Corriente", usuario, "58280270", "022", 500);
+const cuentaDeDana = new cuenta("Corriente", usuario2, "84250304", "028", 0);
 
-const cuentaAhorroLaura = new cuenta(usuario, "764946", "022", 10000.829);
+const cuentaAhorroLaura = new cuenta("Ahorros", usuario, "764946", "022", 10000.829);
+const cuentaAhorroDana = new cuenta("Ahorros", usuario2, "407356", "020", 835.50);
 
 // cliente usuario Laura ----------------------->
 let saldo = cuentaDeLaura.verSaldo();
@@ -43,5 +44,5 @@ console.log(cuentaDeLaura.verSaldo());
 // console.log("CANTIDAD DE CUENTAS CORRIENTES TOTALES: " + cuentaCorriente.cantidadCuentas);
 
 saldo = cuentaAhorroLaura.retiro(100);
-console.log(cuentaAhorroLaura.verSaldo());
 saldo = cuentaAhorroLaura.retiro(1000.766);
+saldo = cuentaAhorroDana.retiro(800);

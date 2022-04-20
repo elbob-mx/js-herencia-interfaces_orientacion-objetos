@@ -6,8 +6,9 @@ export class cuenta {
   #saldo;
 
   // cuenta que transfiere, deposita, retira ***
-  constructor(usuario, numero, agencia, saldo) {
+  constructor(tipo, usuario, numero, agencia, saldo) {
     // atributos públicos:
+    this.tipo = tipo;
     this.numero = numero;
     this.agencia = agencia;
     this.#usuario = usuario;
@@ -18,7 +19,7 @@ export class cuenta {
     if (importe > 0) {
       this.#saldo += importe;
       parseFloat(this.#saldo).toFixed(2);
-      console.log("** Depósito realizado con éxito por: $" + importe + " **");
+      console.log("** Depósito realizado con éxito por: $" + parseFloat(importe).toFixed(2) + " **");
       console.log("** " + this.#usuario.nombreCliente + ", tu nuevo saldo es de: $" + parseFloat(this.#saldo).toFixed(2) + " MXN **");
       return parseFloat(this.#saldo).toFixed(2);
     } else {
@@ -29,19 +30,23 @@ export class cuenta {
   }
 
   retiro(importe) {
+    if(this.tipo == "Corriente") {
     importe = importe * 1.05;
-    if (importe <= this.#saldo) {
-      this.#saldo -= importe;
-      parseFloat(this.#saldo).toFixed(2);
-      console.log("** Depósito realizado con éxito por: $" + importe + " **");
-      console.log("** " + this.#usuario.nombreCliente + ", tu nuevo saldo es de: $" + parseFloat(this.#saldo).toFixed(2) + " MXN **");
-      return parseFloat(this.#saldo).toFixed(2);
-    } else {
-      console.log(`Operación no válida.`);
-      parseFloat(this.#saldo).toFixed(2);
-      return parseFloat(this.#saldo).toFixed(2);
-    }
-  }
+    } else if (this.tipo == "Ahorros") {
+      importe = importe * 1.02;
+    };
+      if (importe <= this.#saldo) {
+        this.#saldo -= importe;
+        parseFloat(this.#saldo).toFixed(2);
+        console.log("** Depósito realizado con éxito por: $" + importe + " **");
+        console.log("** " + this.#usuario.nombreCliente + ", tu nuevo saldo es de: $" + parseFloat(this.#saldo).toFixed(2) + " MXN **");
+        return parseFloat(this.#saldo).toFixed(2);
+      } else {
+        console.log(`Operación no válida.`);
+        parseFloat(this.#saldo).toFixed(2);
+        return parseFloat(this.#saldo).toFixed(2);
+      };
+  };
 
   verSaldo() {
     return (this.#usuario.nombreCliente + ", el saldo en tu cuenta es de: $ " + parseFloat(this.#saldo).toFixed(2) + " MXN");
