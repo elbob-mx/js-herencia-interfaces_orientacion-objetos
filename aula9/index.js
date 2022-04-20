@@ -11,10 +11,10 @@ import { cuenta } from "./Cuenta.js";
 const usuario = new cliente("Laura", "850690845005", "2115");
 const usuario2 = new cliente("Dana", "099433671834", "5593");
 
-const cuentaDeLaura = new cuenta(usuario, "58280270", "022", 0);
+const cuentaDeLaura = new cuenta(usuario, "58280270", "022", 500);
 const cuentaDeDana = new cuenta(usuario2, "84250304", "028", 0);
 
-const cuentaAhorroLaura = new cuenta(usuario, "764946", "022", 0);
+const cuentaAhorroLaura = new cuenta(usuario, "764946", "022", 10000.829);
 
 // cliente usuario Laura ----------------------->
 let saldo = cuentaDeLaura.verSaldo();
@@ -62,5 +62,5 @@ console.log("El saldo actual de " + usuario.nombreCliente + " es de: " + "$" + c
 // console.log(cuentaDeDana.usuario);
 // console.log("CANTIDAD DE CUENTAS CORRIENTES TOTALES: " + cuentaCorriente.cantidadCuentas);
 console.log(cuentaDeLaura);
-console.log(cuentaAhorroLaura);
+console.log(cuentaAhorroLaura.verSaldo());
 console.log(cuentaDeDana);

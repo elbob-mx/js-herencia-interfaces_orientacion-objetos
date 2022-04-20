@@ -43,7 +43,7 @@ export class cuentaAhorro {
   }
 
   verSaldo() {
-    return this.#saldo.toFixed(2);
+    return ("El saldo en tu cuenta de ahorros es de: $ " + this.#saldo.toFixed(2) + " MXN");
   }
 
   transferirParaCuenta(importe, cuentaDestino) {
