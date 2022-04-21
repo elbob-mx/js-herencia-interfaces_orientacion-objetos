@@ -8,7 +8,6 @@ export class cuenta {
   // cuenta que transfiere, deposita y retira ***
   constructor(/*tipo,*/ usuario, numero, agencia, saldo) {
     // atributos públicos:
-    // this.tipo = tipo;
     this.numero = numero;
     this.agencia = agencia;
     this.#usuario = usuario;
@@ -51,28 +50,23 @@ export class cuenta {
   }
 
   retiro(importe) {
-    // if (this.tipo == "Corriente") {
-    //   importe = importe * 1.05;
-    // } else if (this.tipo == "Ahorros") {
-    //   importe = importe * 1.02;
-    // }
+    _retiro(importe, 0);
+  }
+
+  _retiro(importe, comision) {
+    importe = importe * (1 + comision / 100);
     if (importe <= this.#saldo) {
-      this.#saldo -= importe;
-      parseFloat(this.#saldo).toFixed(2);
-      console.log("** Depósito realizado con éxito por: $" + importe + " **");
-      console.log(
-        "** " +
-          this.#usuario.nombreCliente +
-          ", tu nuevo saldo es de: $" +
-          parseFloat(this.#saldo).toFixed(2) +
-          " MXN **"
-      );
-      return parseFloat(this.#saldo).toFixed(2);
-    } else {
-      console.log(`Operación no válida.`);
-      parseFloat(this.#saldo).toFixed(2);
-      return parseFloat(this.#saldo).toFixed(2);
-    }
+    this.#saldo -= importe;
+    parseFloat(this.#saldo).toFixed(2);
+    console.log("** Retiro realizado con éxito por: $" + importe + " **");
+    console.log(
+      "** " + this.#usuario.nombreCliente + ", tu nuevo saldo es de: $" + parseFloat(this.#saldo).toFixed(2) + " MXN **");
+    return parseFloat(this.#saldo).toFixed(2);
+      } else {
+        console.log(`Operación no válida.`);
+        parseFloat(this.#saldo).toFixed(2);
+        return parseFloat(this.#saldo).toFixed(2);
+      }
   }
 
   verSaldo() {
@@ -97,5 +91,5 @@ export class cuenta {
         parseFloat(this.#saldo).toFixed(2) +
         " MXN **"
     );
-  }
-}
+  };
+};

@@ -4,8 +4,6 @@ export class cliente {
     nombreCliente;
     ocrCliente;
     nipCliente;
-    // numCuenta;
-    // saldoCuenta;
 
     constructor(nombreCliente, ocrCliente, nipCliente) {
       this.nombreCliente = nombreCliente;

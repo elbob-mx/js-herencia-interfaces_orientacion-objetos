@@ -4,12 +4,8 @@
 import { cliente } from "./Cliente.js";
 import { cuentaAhorro } from "./CuentaAhorro.js";
 import { cuentaCorriente } from "./CuentaCorriente.js";
-// import { cuenta } from "./Cuenta.js";
-// import { cuentaCorriente } from "./CuentaCorriente.js";
-// import { cuentaAhorro } from "./CuentaAhorro.js";
 
 // variables *** //
-
 const usuario = new cliente("Laura", "850690845005", "2115");
 const usuario2 = new cliente("Dana", "099433671834", "5593");
 
@@ -25,6 +21,9 @@ saldo = cuentaDeLaura.deposito(1000);
 
 // nuevo cliente 2 ------------------------->
 saldo = cuentaDeDana.deposito(2350.756);
+saldo = cuentaDeDana.retiro(800);
+saldo = cuentaAhorroDana.retiro(30);
+saldo = cuentaAhorroLaura.retiro(10);
 
 // resumen cuentas ----------------------------------------------->
 
