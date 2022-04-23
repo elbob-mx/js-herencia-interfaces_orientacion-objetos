@@ -4,6 +4,7 @@
 import { cliente } from "./Cliente.js";
 import { cuentaAhorro } from "./CuentaAhorro.js";
 import { cuentaCorriente } from "./CuentaCorriente.js";
+import { cuenta } from "./Cuenta.js";
 
 // variables *** //
 const usuario = new cliente("Laura", "850690845005", "2115");

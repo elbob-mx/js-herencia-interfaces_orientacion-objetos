@@ -7,6 +7,10 @@ export class cuenta {
 
   // cuenta que transfiere, deposita y retira ***
   constructor(/*tipo,*/ usuario, numero, agencia, saldo) {
+    // error al instanciar cuenta ***:
+    if(this.constructor == cuenta) {
+      throw new Error(" *** PROHIBIDO instanciar objetos de la clase 'cuenta' *** ");
+    };
     // atributos públicos:
     this.numero = numero;
     this.agencia = agencia;
