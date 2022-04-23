@@ -5,7 +5,7 @@ import { cuenta } from "./Cuenta.js";
 export class cuentaCorriente extends cuenta {
   static cantidadCuentas = 0;
   
-  // constuctor cuenta corriente ***
+  // constructor cuenta corriente ***
   constructor(usuario, numero, agencia) {
     super(usuario, numero, agencia, 0);
     cuentaCorriente.cantidadCuentas++;

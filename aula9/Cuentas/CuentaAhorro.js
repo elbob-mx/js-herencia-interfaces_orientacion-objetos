@@ -3,7 +3,7 @@
 import { cuenta } from "./Cuenta.js";
 
 export class cuentaAhorro extends cuenta {
-  // constuctor cuenta ahorros ***
+  // constructor cuenta ahorros ***
   constructor(usuario, numero, agencia, saldo) {
     super(usuario, numero, agencia, saldo);
   };
