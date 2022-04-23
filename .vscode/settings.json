@@ -3,5 +3,6 @@
     "editor.cursorStyle": "line",
     "editor.cursorWidth": 3,
     "terminal.integrated.cursorStyle": "block",
-    "terminal.integrated.cursorWidth": 1
+    "terminal.integrated.cursorWidth": 1,
+    "terminal.integrated.fontFamily": "Source Code Pro",
 }
