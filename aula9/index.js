@@ -2,10 +2,10 @@
 // movimientos de cuenta Laura ----------->
 
 import { cliente } from "./Cliente.js";
-import { cuentaAhorro } from "./CuentaAhorro.js";
-import { cuentaCorriente } from "./CuentaCorriente.js";
+import { cuentaAhorro } from "./Cuentas/CuentaAhorro.js";
+import { cuentaCorriente } from "./Cuentas/CuentaCorriente.js";
+import { CuentaNomina } from "./Cuentas/CuentaNomina.js";
 // import { cuenta } from "./Cuenta.js";
-import { CuentaNomina } from "./CuentaNomina.js";
 
 
 // variables *** //

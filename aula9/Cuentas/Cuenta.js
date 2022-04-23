@@ -19,7 +19,7 @@ export class cuenta {
   }
 
     /**
-   * @param {import("./Cliente").cliente} valor
+   * @param {import("../Cliente").cliente} valor
    */
      set usuario(valor) {
       if (valor instanceof cliente) this.#usuario = valor;
