@@ -4,7 +4,9 @@
 import { cliente } from "./Cliente.js";
 import { cuentaAhorro } from "./CuentaAhorro.js";
 import { cuentaCorriente } from "./CuentaCorriente.js";
-import { cuenta } from "./Cuenta.js";
+// import { cuenta } from "./Cuenta.js";
+import { CuentaNomina } from "./CuentaNomina.js";
+
 
 // variables *** //
 const usuario = new cliente("Laura", "850690845005", "2115");
@@ -16,22 +18,31 @@ const cuentaDeDana = new cuentaCorriente(usuario2, "84250304", "028");
 const cuentaAhorroLaura = new cuentaAhorro(usuario, "764946", "022", 10000.829);
 const cuentaAhorroDana = new cuentaAhorro(usuario2, "407356", "028", 835.5);
 
-// cliente usuario Laura ----------------------->
-let saldo = cuentaDeLaura.verSaldo();
-saldo = cuentaDeLaura.deposito(1000);
+const cuentaNominaLaura = new CuentaNomina(usuario, "654961", "022", 100);
 
-// nuevo cliente 2 ------------------------->
-saldo = cuentaDeDana.deposito(2350.756);
-saldo = cuentaDeDana.retiro(800);
-saldo = cuentaAhorroDana.retiro(30);
-saldo = cuentaAhorroLaura.retiro(10);
+cuentaNominaLaura.deposito(4500);
+console.log(cuentaNominaLaura.verSaldo());
+cuentaNominaLaura.retiro(3000);
+console.log(cuentaNominaLaura.verSaldo());
 
-// resumen cuentas ----------------------------------------------->
 
-let paramValor = 100;
-cuentaDeLaura.transferirParaCuenta(paramValor, cuentaDeDana);
+// // cliente usuario Laura ----------------------->
+// let saldo = cuentaDeLaura.verSaldo();
+// saldo = cuentaDeLaura.deposito(1000);
 
-console.log(cuentaDeLaura);
-console.log(cuentaAhorroLaura);
-console.log(cuentaDeDana);
-console.log(cuentaAhorroDana);
+
+// // nuevo cliente 2 ------------------------->
+// saldo = cuentaDeDana.deposito(2350.756);
+// saldo = cuentaDeDana.retiro(800);
+// saldo = cuentaAhorroDana.retiro(30);
+// saldo = cuentaAhorroLaura.retiro(10);
+
+
+// // resumen cuentas ----------------------------------------------->
+// let paramValor = 100;
+// cuentaDeLaura.transferirParaCuenta(paramValor, cuentaDeDana);
+
+// console.log(cuentaDeLaura);
+// console.log(cuentaAhorroLaura);
+// console.log(cuentaDeDana);
+// console.log(cuentaAhorroDana);

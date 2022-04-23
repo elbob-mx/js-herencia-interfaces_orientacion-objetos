@@ -44,7 +44,9 @@ export class cuenta {
   }
 
   retiro(importe) {
-    _retiro(importe, 0);
+    // método abstracto
+    throw new Error ("Implementar método 'retiro' en su clase");
+    // this._retiro(importe, 0);
   }
 
   _retiro(importe, comision) {
