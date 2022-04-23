@@ -33,18 +33,8 @@ export class cuenta {
     if (importe > 0) {
       this.#saldo += importe;
       parseFloat(this.#saldo).toFixed(2);
-      console.log(
-        "** Depósito realizado con éxito por: $" +
-          parseFloat(importe).toFixed(2) +
-          " **"
-      );
-      console.log(
-        "** " +
-          this.#usuario.nombreCliente +
-          ", tu nuevo saldo es de: $" +
-          parseFloat(this.#saldo).toFixed(2) +
-          " MXN **"
-      );
+      console.log("** Depósito realizado con éxito por: $" + parseFloat(importe).toFixed(2) + " **");
+      console.log( "** " + this.#usuario.nombreCliente + ", tu nuevo saldo es de: $" + parseFloat(this.#saldo).toFixed(2) + " MXN **");
       return parseFloat(this.#saldo).toFixed(2);
     } else {
       console.log(`Operación no válida.`);
@@ -62,9 +52,8 @@ export class cuenta {
     if (importe <= this.#saldo) {
     this.#saldo -= importe;
     parseFloat(this.#saldo).toFixed(2);
-    console.log("** Retiro realizado con éxito por: $" + importe + " **");
-    console.log(
-      "** " + this.#usuario.nombreCliente + ", tu nuevo saldo es de: $" + parseFloat(this.#saldo).toFixed(2) + " MXN **");
+    console.log("** Retiro realizado con éxito por: $" + importe.toFixed(2) + " **");
+    console.log( "** " + this.#usuario.nombreCliente + ", tu nuevo saldo es de: $" + parseFloat(this.#saldo).toFixed(2) + " MXN **");
     return parseFloat(this.#saldo).toFixed(2);
       } else {
         console.log(`Operación no válida.`);
@@ -74,26 +63,13 @@ export class cuenta {
   }
 
   verSaldo() {
-    return (
-      this.#usuario.nombreCliente +
-      ", el saldo en tu cuenta es de: $ " +
-      parseFloat(this.#saldo).toFixed(2) +
-      " MXN"
-    );
+    return (this.#usuario.nombreCliente + ", el saldo en tu cuenta es de: $ " + parseFloat(this.#saldo).toFixed(2) + " MXN");
   }
 
   transferirParaCuenta(importe, cuentaDestino) {
     this.retiro(importe);
     cuentaDestino.deposito(importe);
-    console.log(
-      "** Transferencia realizada con éxito por: $" + this.#saldo + " **"
-    );
-    console.log(
-      "** " +
-        this.#usuario.nombreCliente +
-        ", tu nuevo saldo es de: $" +
-        parseFloat(this.#saldo).toFixed(2) +
-        " MXN **"
-    );
+    console.log("** Transferencia realizada con éxito por: $" + (this.#saldo).toFixed(2) + " **");
+    console.log( "** " + this.#usuario.nombreCliente + ", tu nuevo saldo es de: $" + parseFloat(this.#saldo).toFixed(2) + " MXN **");
   };
 };

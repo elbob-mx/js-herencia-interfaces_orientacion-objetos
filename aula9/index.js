@@ -14,7 +14,7 @@ const cuentaDeLaura = new cuentaCorriente(usuario, "58280270", "022");
 const cuentaDeDana = new cuentaCorriente(usuario2, "84250304", "028");
 
 const cuentaAhorroLaura = new cuentaAhorro(usuario, "764946", "022", 10000.829);
-const cuentaAhorroDana = new cuentaAhorro(usuario2, "407356", "020", 835.5);
+const cuentaAhorroDana = new cuentaAhorro(usuario2, "407356", "028", 835.5);
 
 // cliente usuario Laura ----------------------->
 let saldo = cuentaDeLaura.verSaldo();
