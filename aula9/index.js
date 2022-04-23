@@ -5,7 +5,9 @@ import { cliente } from "./Cliente.js";
 import { cuentaAhorro } from "./Cuentas/CuentaAhorro.js";
 import { cuentaCorriente } from "./Cuentas/CuentaCorriente.js";
 import { CuentaNomina } from "./Cuentas/CuentaNomina.js";
+import { Director } from "./Empleados/Director.js";
 import { Empleado } from "./Empleados/Empleado.js";
+import { Gerente } from "./Empleados/Gerente.js";
 // import { cuenta } from "./Cuenta.js";
 
 
@@ -13,7 +15,9 @@ import { Empleado } from "./Empleados/Empleado.js";
 const usuario = new cliente("Laura", "850690845005", "2115");
 const usuario2 = new cliente("Dana", "099433671834", "5593");
 
-const empleado = new Empleado("Chema", "699382890149");
+const empleado = new Empleado("Laisa Mora", "699382890149");
+const gerente = new Gerente("Indiana Mora", "716754489281");
+const director = new Director("Horacio Mora", "331575759356")
 
 
 // const cuentaDeLaura = new cuentaCorriente(usuario, "58280270", "022");
