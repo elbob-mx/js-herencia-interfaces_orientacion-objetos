@@ -7,4 +7,9 @@ export class Director extends Empleado {
   constructor(nombre, ocr, salario) {
     super(nombre, ocr, salario);
   };
+
+  verBonificacion(){
+    const bono = 10;
+    return super._verBonificacion(bono);
+  };
 };
