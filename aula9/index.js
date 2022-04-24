@@ -13,15 +13,10 @@ import { SistemaAutenticacion } from "./SistemaAutenticacion.js";
 
 
 // variables *** //
-const usuario = new cliente("Laura", "850690845005", "2115");
-usuario.asignarClave("algunafechaa");
-console.log(SistemaAutenticacion.login(usuario, "algunafecha"));
-
-// const usuario2 = new cliente("Dana", "099433671834", "5593");
-
+// empleados ----------->
 const empleado = new Empleado("Laisa Mora", "699382890149", 8000);
-empleado.asignarClave("ño");
-console.log(SistemaAutenticacion.login(empleado, "ño"));
+empleado.asignarClave("naniacs");
+console.log(SistemaAutenticacion.login(empleado, "naniacs"));
 
 const gerente = new Gerente("Indiana Mora", "716754489281", 12000);
 gerente.asignarClave("password");
@@ -30,6 +25,15 @@ console.log(SistemaAutenticacion.login(gerente, "password"));
 const director = new Director("Horacio Mora", "331575759356", 20000);
 gerente.asignarClave("jamon");
 console.log(SistemaAutenticacion.login(gerente, "jamon"));
+
+
+// clientes ------------->
+const usuario = new cliente("Laura", "850690845005", "2115");
+usuario.asignarClave("algunafecha");
+console.log(SistemaAutenticacion.login(usuario, "algunafecha"));
+
+// const usuario2 = new cliente("Dana", "099433671834", "5593");
+
 
 console.log(empleado.verBonificacion());
 console.log(gerente.verBonificacion());

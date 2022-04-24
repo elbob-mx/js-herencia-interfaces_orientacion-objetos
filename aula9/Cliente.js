@@ -15,10 +15,10 @@ export class cliente {
 
     asignarClave(clave) {
       this.#clave = clave;
-  };
+    };
 
-  get clave() {
-      return this.#clave;
-  };
+    autenticable(clave) {
+      return true;
+    };
 
   };

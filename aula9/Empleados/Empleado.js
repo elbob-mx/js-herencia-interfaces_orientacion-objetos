@@ -1,3 +1,5 @@
+// clase generalizada para empleados ***
+
 export class Empleado {
     #nombre;
     #ocr;
@@ -15,8 +17,8 @@ export class Empleado {
         this.#clave = clave;
     };
 
-    get clave() {
-        return this.#clave;
+    autenticable(clave) {
+        return clave == this.#clave;
     };
 
     verBonificacion() {
